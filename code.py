@@ -1,10 +1,3 @@
-"""
-Ram Rocketry Payload Code 2025 - BMP390, SGP40, and HTS221
-Authors:
-- Surge (Evan Floyd | esfloyd9341@gmail.com, floydes@vcu.edu)
-- Elias Quintero (quinteroer.01@gmail.com | quinteroer@vcu.edu)
-"""
-
 # Importing Libraries
 import time
 import board
