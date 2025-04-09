@@ -1,0 +1,10 @@
+.fseventsd/
+.vscode/
+.ropeproject
+System Volume Information/
+sd/
+
+*.Trash-1000
+*.Trashes
+*.metadata_never_index
+boot_out.txt
