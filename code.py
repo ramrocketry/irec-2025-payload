@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+"""
+Ram Rocketry Payload Code 2025 - BMP390, SGP40, and HTS221
+Authors:
+- Surge (Evan Floyd | esfloyd9341@gmail.com, floydes@vcu.edu)
+- Elias Quintero (quinteroer.01@gmail.com | quinteroer@vcu.edu)
+"""
+
+>>>>>>> e85725a (surge: Sync board code with git repo)
 # Importing Libraries
 import time
 import board
@@ -77,6 +87,7 @@ def read_hts221():
 
 def startup():
     print("Starting in 5", end="")
+<<<<<<< HEAD
     time.sleep(1)
     write = sys.stdout.write
     write("\b \b")
@@ -100,6 +111,17 @@ def startup():
         print("")
 
 
+=======
+    for i in range(4, -1, -1):
+        time.sleep(1)
+        write = sys.stdout.write
+        write("\b \b")
+        print(i, end="")
+
+    for i in range(1, 6):
+        print("")
+
+>>>>>>> e85725a (surge: Sync board code with git repo)
 def main():
     print(board.board_id)
     startup()
@@ -115,6 +137,7 @@ def main():
                 temp_bmp + temp_hts
             ) / 2 + 32  # take average of the two measurements
 
+<<<<<<< HEAD
         if temp_final is not None and pressure is not None:
             print(f"Temperature             = {temp_final:.2f} Fahrenheit")
             print(f"Pressure                = {pressure:.2f} hPa")
@@ -133,6 +156,29 @@ def main():
 
         print("-" * 45)
         time.sleep(0.1)
+=======
+        #if temp_final is not None and pressure is not None:
+        #    print(f"Temperature             = {temp_final:.2f} Fahrenheit")
+        #    print(f"Pressure                = {pressure:.2f} hPa")
+        # else:
+        #     print("BMP390: Sensor not initialized")
+
+        # if aqi is not None:
+        #     print(f"Air Quality Index (RAW) = {aqi}")
+        # else:
+        #     print("SGP40: Sensor not initialized")
+
+        # if humidity is not None and temp_hts is not None:
+        #     print(f"Humidity                = {humidity:.2f}%")
+        # else:
+        #     print("HTS221: Sensor not initialized")
+
+        # print("-" * 45)
+
+        line = f"{temp_final:.2f},{pressure:.2f},{humidity:.2f},{aqi}"
+        print(line)
+
+>>>>>>> e85725a (surge: Sync board code with git repo)
 
 
 # Run the main loop
